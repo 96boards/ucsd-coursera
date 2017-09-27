@@ -43,10 +43,6 @@ def intercept_morse_code():
     global last_edge, press, release, button
     
     while True:
-<<<<<<< HEAD
-		print int(button.read())
-=======
->>>>>>> aaf63d7efd37e6f8c1330d1d7428d88bf4cf23d1
 		# Button pressed - determine if start of new letter/word
 		if int(button.read()) == 1 and last_edge == 0:
 		    last_edge = 1
@@ -142,6 +138,7 @@ def calc_delta_in_sec(time1, time2):
 try:
     initialize_gpio()
     initialize_metronome()
+    initialize_button()
     message = raw_input("\nPress any key to exit.\n")
 
 
