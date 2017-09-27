@@ -50,8 +50,7 @@ $ sudo apt-get install libmraa-dev
 
 ```shell
 $ git clone https://github.com/96boards/ucsd-coursera.git
-$ cd projects
-$ cd Magic8
+$ cd course_2/module_2/Magic8
 $ make
 $ ./magic8
 ```
