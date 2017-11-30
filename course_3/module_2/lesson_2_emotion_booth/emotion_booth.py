@@ -20,7 +20,7 @@ class Arm():
         msg =''
         for angle in angles:
             msg += str(angle).zfill(3)
-        arduino.write(msg)
+        #arduino.write(msg)
     
     def update(self,servo_id, angle):
         self.servos[int(servo_id)] = int(angle)
@@ -43,13 +43,11 @@ image = 'face.jpg'
 image_path = 'emotion_booth/face.jpg'
 
 cv2.imwrite(image,frame)
-time.sleep(5)
 
 with open(image, 'rb') as data:
     s3.upload_fileobj(data, bucket, image_path)
 
 
-time.sleep(5)
 
 response = client.detect_faces(
     Image={
@@ -71,10 +69,13 @@ emotion = top_emotion['Type']
 confidence = top_emotion['Confidence']
 
 if emotion == "HAPPY":
+    print(emotion)
     arm.update(0,45) # Right
 elif emotion == "SAD":
+    print(emotion)
     arm.update(0,135) # Left
 else:
+    print("Neutral")
     arm.update(0,90) # Center
     
 print(json.dumps(emotions, indent=4, sort_keys=True))
