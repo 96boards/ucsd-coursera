@@ -2,6 +2,7 @@ import boto3
 import cv2
 import numpy as np
 import json
+import time
 
 s3 = boto3.client('s3')
 client = boto3.client('rekognition')
@@ -13,25 +14,30 @@ ret, frame = cap.read()
 
 # Display the resulting frame
 cv2.imshow('frame',frame)
-if cv2.waitKey(1) & 0xFF == ord('q'):
-    pass
+cv2.waitKey(1)
 
-cv2.imwrite('face.jpg',frame)
+bucket = 'ucsd-coursera'
+image = 'face.jpg'
+image_path = 'emotion_booth/face.jpg'
 
-with open('face.jpg', 'rb') as data:
-    s3.upload_fileobj(data, 'ucsd-coursera', 'emotion_booth/face.jpg')
+cv2.imwrite(image,frame)
+
+with open(image, 'rb') as data:
+    s3.upload_fileobj(data, bucket, image_path)
+
 
 response = client.detect_faces(
     Image={
         'S3Object': {
-            'Bucket': 'ucsd-coursera',
-            'Name': 'emotion_booth/face.jpg',
+            'Bucket': bucket,
+            'Name': image_path,
         }
     },
     Attributes=[
         'ALL',
     ]
 )
+
 
 print(json.dumps(response['FaceDetails'][0]['Emotions'], indent=4, sort_keys=True))
 
