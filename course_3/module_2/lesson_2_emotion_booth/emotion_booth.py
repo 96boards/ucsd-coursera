@@ -65,7 +65,7 @@ emotions = response['FaceDetails'][0]['Emotions']
 
 
 top_emotion = emotions[0]
-emotion = = emotion['Type']
+emotion = emotion['Type']
 confidence = emotion['Confidence']
 
 if emotion == "HAPPY":
