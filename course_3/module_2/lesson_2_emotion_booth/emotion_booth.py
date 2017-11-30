@@ -77,8 +77,6 @@ elif emotion == "SAD":
 else:
     print("Neutral")
     arm.update(0,90) # Center
-    
-print(json.dumps(emotions, indent=4, sort_keys=True))
 
 # Display the resulting frame
 cv2.imshow('frame',frame)
