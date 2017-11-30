@@ -21,7 +21,6 @@ class Arm():
         for angle in angles:
             msg += str(angle).zfill(3)
         arduino.write(msg)
-        time.sleep(3)
     
     def update(self,servo_id, angle):
         self.servos[int(servo_id)] = int(angle)
@@ -36,7 +35,7 @@ cap = cv2.VideoCapture(0)
 
 # Capture frame-by-frame
 ret, frame = cap.read()
-
+cap.release()
 
 
 bucket = 'ucsd-coursera'
@@ -44,10 +43,13 @@ image = 'face.jpg'
 image_path = 'emotion_booth/face.jpg'
 
 cv2.imwrite(image,frame)
+time.sleep(5)
 
 with open(image, 'rb') as data:
     s3.upload_fileobj(data, bucket, image_path)
 
+
+time.sleep(5)
 
 response = client.detect_faces(
     Image={
@@ -65,15 +67,15 @@ emotions = response['FaceDetails'][0]['Emotions']
 
 
 top_emotion = emotions[0]
-emotion = = emotion['Type']
-confidence = emotion['Confidence']
+emotion = top_emotion['Type']
+confidence = top_emotion['Confidence']
 
 if emotion == "HAPPY":
-    arm.update(0,180)
+    arm.update(0,45) # Right
 elif emotion == "SAD":
-    arm.update(0,0)
+    arm.update(0,135) # Left
 else:
-    arm.update(0,90)
+    arm.update(0,90) # Center
     
 print(json.dumps(emotions, indent=4, sort_keys=True))
 
@@ -82,5 +84,4 @@ cv2.imshow('frame',frame)
 cv2.waitKey()
     
 # When everything done, release the capture
-cap.release()
 cv2.destroyAllWindows()
