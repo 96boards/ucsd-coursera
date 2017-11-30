@@ -5,6 +5,8 @@ import json
 import time
 import serial
 
+print("Starting emotion booth")
+
 BAUD_RATE = 9600
 PORT = '/dev/tty96B0'
 
@@ -20,7 +22,7 @@ class Arm():
         msg =''
         for angle in angles:
             msg += str(angle).zfill(3)
-        #arduino.write(msg)
+        arduino.write(msg)
     
     def update(self,servo_id, angle):
         self.servos[int(servo_id)] = int(angle)
@@ -34,6 +36,9 @@ client = boto3.client('rekognition')
 cap = cv2.VideoCapture(0)
 
 # Capture frame-by-frame
+# Capture twice because camera kept getting one frame old
+# Change to only one line if yours gets current fram correctly
+ret, frame = cap.read()
 ret, frame = cap.read()
 cap.release()
 
