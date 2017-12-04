@@ -1,7 +1,6 @@
-# Project Name
+# Facebook Chatbot
 
-Project description.
-
+Create a Facebook chatbot that communicates with clients.
 
 # Table of Contents
 
@@ -19,7 +18,7 @@ Project description.
 
 ***
 
-# 1) Hardware
+# 1) Hardware (Optional)
 
 ## 1.1 Hardware requirements
 
@@ -41,24 +40,28 @@ Project description.
 ## 2.2 Package Dependencies
 
 ```shell
-$ sudo apt-get update
-$ sudo apt-get dist-upgrade
+sudo apt-get update
+sudo apt-get dist-upgrade
 
-$ sudo apt-get install -y packages
+sudo apt-get install -y python-dev python-pip
+pip install awscli boto3
 ```
-# 3) Additional Steps
+# 3) Amazon Web Services Setup
 
-#### Instruction Title
-Instruction.
+#### Create an AWS account.
+Go to [AWS](https://aws.amazon.com/). Click on 'Create an AWS Account'. Follow their steps.  
 
-## 3.1 Additional Substeps
+Note: It does require a credit card, however, most services with limits are free for 12 months.
+
+## 3.1 Create an IAM User.
+
 
 #### Substep
 
 ```
 some code
 ```
-## 3.2 More Substeps
+## 3.2 Give User Permissions
 
 #### Substep
 
@@ -67,11 +70,14 @@ Instructions.
 ```shell
 code
 ```
+## 3.2 Obtain Keys
+- AWS Access Key ID
+- AWS Secret Acess Key
 # 4) Execution
 
 
 #### Run the Code
 
 ```shell
-$ python main.py
+python main.py
 ```
