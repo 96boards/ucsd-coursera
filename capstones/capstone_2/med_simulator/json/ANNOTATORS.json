@@ -1,0 +1,7 @@
+{ "annotator": [
+    { "name": "atr",
+      "desc": "unaudited R- and T-wave peaks annotations from an automated detector"
+    }
+  ],
+  "success": true
+}

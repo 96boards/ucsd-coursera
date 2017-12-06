@@ -1,0 +1,33 @@
+{ "info":
+  { "db": "ecgiddb",
+    "record": "Person_01/rec_1",
+    "tfreq": 500,
+    "start": null,
+    "end": null,
+    "duration": "0:20.000",
+    "signal": [
+      { "name": "ECG I",
+        "tps": 1,
+        "units": null,
+        "gain": 200,
+        "adcres": 12,
+        "adczero": 0,
+        "baseline": 0
+      },
+      { "name": "ECG I filtered",
+        "tps": 1,
+        "units": null,
+        "gain": 200,
+        "adcres": 12,
+        "adczero": 0,
+        "baseline": 0
+      }
+    ],
+    "note": [
+      " Age: 25",
+      " Sex: male",
+      " ECG date: 07.12.2004"
+    ]
+  },
+  "success": true
+}

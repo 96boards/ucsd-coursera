@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DragonBoard Sensors</title>
+
+<!-- Javascript libraries -->
+<!-- AngularJS 1.4.8: Easily manipulate html values and peform http requests-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!--Chart.js 2.60: Creating simple dynamic charts-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+</head>
+
+<body>
+
+<!-- Sets this element to be manipulated by "myApp" and "myCtrl". Also sets the initialize function to "init()" -->
+<div ng-app="myApp" ng-controller="myCtrl" ng-init="init()">
+<center><h1>DragonBoard Sensor Data</h1></center>
+
+<!-- Displays current temperature, light level, and sound level using variables within curly brackets {{varible_name}} -->
+<center>
+<p>ECG: <strong> {{ecg}}</strong></p>
+</center>
+
+<!-- Where the chart will be displayed -->
+<center><canvas id="myChart" ></canvas></center>
+</div>
+
+<script>
+//Create an instance of the app
+var app = angular.module('myApp', []); 
+
+/*Controller performs functions and manipulates scope variables in the html.
+Must include $scope in paramters because it allows us to manipulate {{variable_name}} in html.
+Must include $http so that we can perform http requests.
+*/
+app.controller('myCtrl', function($scope, $http) { 
+	//Initialization function that sets all variables to 0.	
+	$scope.init = function(){
+		$scope.ecg = 0;
+	}
+	
+	//setInterval performs this function every 1 second. Value of time found near the bottom.
+	setInterval(function(){
+		//Performs an http get request to /data on local site
+		$http.get("data")
+		//When the it receives a response do the following
+		.then(function(response) {
+		/*This is what reponse.data looks like
+		{
+		"Item":{
+			"ID":1,
+			"sensors":{
+				"date":1496098751060,
+				"light":736,
+				"sound":411,
+				"name":"DragonBoard",
+				"temperature":23.83,
+				"id":1
+			},
+			"Name":"DragonBoard"
+			}
+		}
+		*/
+		//Takes all the data from the response and stores them in variables
+		var ecg = response.data.Item.ecg.ecg;
+		console.log(ecg);
+
+		/*Takes the date from the response which is in UNIX time (Milliseconds since epoch).
+		Creates a javascript Date object using the UNIX time.			
+		Time is in hours, minutes, and seconds as a string.
+		EX: 1496098751060 -> Date object -> 15:59:11 GMT-0700 (PDT)*/
+		var unixTime = response.data.Item.ecg.date;		
+		var date = new Date(unixTime);
+		var time = date.toTimeString();
+
+		//Sets all the variables in curly brackets, e.g. {{light}}, to values from response
+		$scope.ecg = ecg;
+		
+		//Updates the chart with new data at the current time.		
+		addData(myChart, time, [ecg]);
+		}); //END $http request
+	}, 10); //END setInterval: This 1 is the number of seconds between each time the function runs.
+});//END app.controller
+
+/*
+Adds data to each line on the chart.
+@param	chart 	chart that data is added to
+@param	label 	label of the new data
+@param	newData	data that is being added
+@return	none
+*/
+function addData(chart, label, newData) {
+	//Add new label at end
+	chart.data.labels.push(label); 
+	console.log(chart.data.labels.length);
+	if(chart.data.labels.length > 100){
+		chart.data.labels.splice(0, 1); // remove first label
+	}
+
+	//For each dataset append some data to the end from newData array
+	chart.data.datasets.forEach(function(dataset, index) {
+		dataset.data.push(newData[index]);
+		if(dataset.data.length > 100){
+			dataset.data.splice(0, 1); // remove first data point
+		}
+	});
+
+	//Update the chart
+	chart.update();
+}
+
+//Gets the context from the canvas created earlier
+var context = document.getElementById("myChart").getContext('2d');
+//context.canvas.width = 1000;
+//context.canvas.height = 500;
+
+//Creates a chart using the context and data.
+var myChart = new Chart(context, {
+	type: 'line',
+	data: {
+		labels: [], //Empty x-axis labels, will be added using addData function		
+		datasets: [{
+			label: "ECG", //Label of line
+			data: [],		//Data plotted against y-axis
+			backgroundColor: 'rgba(255, 99, 132, 0.2)', //Red //Color of fill under line
+			borderColor: 'rgba(255,99,132,1)', //Color of line
+			borderWidth: 1		//Width of line
+		}]
+	},
+	options: {
+		responsive:true //Allows chart to change size with the size of the screen
+	}
+});
+
+</script>
+
+</body>
+</html>
+

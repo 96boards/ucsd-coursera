@@ -1,0 +1,365 @@
+http://localhost/cgi-bin/lightwave?action=dblist&callback=?
+
+?({ "database": [
+    { "name": "adfecgdb",
+      "desc": "Abdominal and Direct Fetal ECG Database"
+    },
+    { "name": "aftdb",
+      "desc": "AF Termination Challenge Database"
+    },
+    { "name": "aami-ec13",
+      "desc": "ANSI/AAMI EC13 Test Waveforms"
+    },
+    { "name": "ahadb",
+      "desc": "AHA Database [sample excluded record]"
+    },
+    { "name": "apnea-ecg",
+      "desc": "Apnea-ECG Database"
+    },
+    { "name": "chfdb",
+      "desc": "BIDMC Congestive Heart Failure Database"
+    },
+    { "name": "bpssrat",
+      "desc": "Blood Pressure in Salt-Sensitive Dahl Rats"
+    },
+    { "name": "capslpdb",
+      "desc": "CAP Sleep Database"
+    },
+    { "name": "challenge/2009/test-set-a",
+      "desc": "Challenge 2009 Test Set A"
+    },
+    { "name": "challenge/2009/test-set-b",
+      "desc": "Challenge 2009 Test Set B"
+    },
+    { "name": "challenge/2010/set-a",
+      "desc": "Challenge 2010 Training Set A"
+    },
+    { "name": "challenge/2010/set-b",
+      "desc": "Challenge 2010 Test Set B"
+    },
+    { "name": "challenge/2010/set-c",
+      "desc": "Challenge 2010 Test Set C"
+    },
+    { "name": "challenge/2011/sim",
+      "desc": "Challenge 2011 Pilot Set"
+    },
+    { "name": "challenge/2011/set-a",
+      "desc": "Challenge 2011 Training Set A"
+    },
+    { "name": "challenge/2011/set-b",
+      "desc": "Challenge 2011 Test Set B"
+    },
+    { "name": "challenge/2013/set-a",
+      "desc": "Challenge 2013 Training Set A"
+    },
+    { "name": "challenge/2013/set-b",
+      "desc": "Challenge 2013 Test Set B"
+    },
+    { "name": "challenge/2014/set-p",
+      "desc": "Challenge 2014 Training Set"
+    },
+    { "name": "challenge/2014/set-p2",
+      "desc": "Challenge 2014 Extended Training Set"
+    },
+    { "name": "challenge/2015/training",
+      "desc": "Challenge 2015 Training Set"
+    },
+    { "name": "challenge/2016/training-a",
+      "desc": "Challenge 2016 Training Set A"
+    },
+    { "name": "challenge/2016/training-b",
+      "desc": "Challenge 2016 Training Set B"
+    },
+    { "name": "challenge/2016/training-c",
+      "desc": "Challenge 2016 Training Set C"
+    },
+    { "name": "challenge/2016/training-d",
+      "desc": "Challenge 2016 Training Set D"
+    },
+    { "name": "challenge/2016/training-e",
+      "desc": "Challenge 2016 Training Set E"
+    },
+    { "name": "challenge/2016/training-f",
+      "desc": "Challenge 2016 Training Set F"
+    },
+    { "name": "challenge/2017/training",
+      "desc": "Challenge 2017 Training Set"
+    },
+    { "name": "chbmit",
+      "desc": "CHB-MIT Scalp EEG Database"
+    },
+    { "name": "charisdb",
+      "desc": "CHARIS database"
+    },
+    { "name": "cebsdb",
+      "desc": "Combined measurement of ECG, Breathing and Seismocardiograms"
+    },
+    { "name": "chf2db",
+      "desc": "Congestive Heart Failure RR Interval Database"
+    },
+    { "name": "crisdb",
+      "desc": "CAST RR Interval Sub-Study Database"
+    },
+    { "name": "ctu-uhb-ctgdb",
+      "desc": "CTU-CHB Intrapartum Cardiotocography Database"
+    },
+    { "name": "cudb",
+      "desc": "CU Ventricular Tachyarrhythmia Database"
+    },
+    { "name": "ecgdmmld",
+      "desc": "ECG Effects of Dofetilide, Moxifloxacin, Dofetilide+Mexiletine, Dofetilide+Lidocaine and Moxifloxacin+Diltiazem"
+    },
+    { "name": "ecgrdvq",
+      "desc": "ECG Effects of Ranolazine, Dofetilide, Verapamil, and Quinidine"
+    },
+    { "name": "ecgiddb",
+      "desc": "ECG-ID Database"
+    },
+    { "name": "eegmmidb",
+      "desc": "EEG Motor Movement/Imagery Dataset"
+    },
+    { "name": "erpbci",
+      "desc": "ERP-based Brain-Computer Interface recordings"
+    },
+    { "name": "edb",
+      "desc": "European ST-T Database"
+    },
+    { "name": "earh",
+      "desc": "Evoked Auditory Responses in Heading Impaired"
+    },
+    { "name": "earndb",
+      "desc": "Evoked Auditory Responses in Normals"
+    },
+    { "name": "emgdb",
+      "desc": "Examples of Electromyograms"
+    },
+    { "name": "fantasia",
+      "desc": "Fantasia Database"
+    },
+    { "name": "fecgsyndb",
+      "desc": "Fetal ECG Synthetic Database"
+    },
+    { "name": "fpcgdb",
+      "desc": "Fetal PCG Database"
+    },
+    { "name": "gaitdb",
+      "desc": "Gait in Aging and Disease Database"
+    },
+    { "name": "gaitndd",
+      "desc": "Gait in Neurodegenerative Disease Database"
+    },
+    { "name": "gait-maturation-db/data",
+      "desc": "Gait Maturation Database"
+    },
+    { "name": "meditation/data",
+      "desc": "Heart Rate Oscillations during Meditation"
+    },
+    { "name": "hbedb",
+      "desc": "Human Balance Evaluation Database"
+    },
+    { "name": "ehgdb",
+      "desc": "Icelandic 16-electrode Electrohysterogram Database"
+    },
+    { "name": "iafdb",
+      "desc": "Intracardiac Atrial Fibrillation Database"
+    },
+    { "name": "ltafdb",
+      "desc": "Long Term AF Database"
+    },
+    { "name": "ltrsvp",
+      "desc": "EEG Signals from an RSVP Task"
+    },
+    { "name": "ltstdb",
+      "desc": "Long Term ST Database"
+    },
+    { "name": "mssvepdb",
+      "desc": "MAMEM SSVEP Database"
+    },
+    { "name": "mghdb",
+      "desc": "MGH/MF Waveform Database"
+    },
+    { "name": "mimicdb",
+      "desc": "MIMIC Database"
+    },
+    { "name": "mimicdb/numerics",
+      "desc": "MIMIC Database Numerics"
+    },
+    { "name": "mimic2cdb",
+      "desc": "MIMIC II Clinical Database Public Subset"
+    },
+    { "name": "mimic2wdb/30",
+      "desc": "MIMIC II Waveform Database, version 3 part 0"
+    },
+    { "name": "mimic2wdb/31",
+      "desc": "MIMIC II Waveform Database, version 3 part 1"
+    },
+    { "name": "mimic2wdb/32",
+      "desc": "MIMIC II Waveform Database, version 3 part 2"
+    },
+    { "name": "mimic2wdb/33",
+      "desc": "MIMIC II Waveform Database, version 3 part 3"
+    },
+    { "name": "mimic2wdb/34",
+      "desc": "MIMIC II Waveform Database, version 3 part 4"
+    },
+    { "name": "mimic2wdb/35",
+      "desc": "MIMIC II Waveform Database, version 3 part 5"
+    },
+    { "name": "mimic2wdb/36",
+      "desc": "MIMIC II Waveform Database, version 3 part 6"
+    },
+    { "name": "mimic2wdb/37",
+      "desc": "MIMIC II Waveform Database, version 3 part 7"
+    },
+    { "name": "mimic2wdb/38",
+      "desc": "MIMIC II Waveform Database, version 3 part 8"
+    },
+    { "name": "mimic2wdb/39",
+      "desc": "MIMIC II Waveform Database, version 3 part 9"
+    },
+    { "name": "mimic2wdb/matched",
+      "desc": "MIMIC II Waveform Database Matched Subset"
+    },
+    { "name": "mitdb",
+      "desc": "MIT-BIH Arrhythmia Database"
+    },
+    { "name": "afdb",
+      "desc": "MIT-BIH Atrial Fibrillation Database"
+    },
+    { "name": "cdb",
+      "desc": "MIT-BIH ECG Compression Test Database"
+    },
+    { "name": "ltdb",
+      "desc": "MIT-BIH Long-Term ECG Database"
+    },
+    { "name": "vfdb",
+      "desc": "MIT-BIH Malignant Ventricular Ectopy Database"
+    },
+    { "name": "nstdb",
+      "desc": "MIT-BIH Noise Stress Test Database"
+    },
+    { "name": "nsrdb",
+      "desc": "MIT-BIH Normal Sinus Rhythm Database"
+    },
+    { "name": "excluded",
+      "desc": "... [Recordings excluded from the NSR DB]"
+    },
+    { "name": "slpdb",
+      "desc": "MIT-BIH Polysomnographic Database"
+    },
+    { "name": "stdb",
+      "desc": "MIT-BIH ST Change Database"
+    },
+    { "name": "svdb",
+      "desc": "MIT-BIH Supraventricular Arrhythmia Database"
+    },
+    { "name": "mmgdb",
+      "desc": "MMG Database"
+    },
+    { "name": "macecgdb",
+      "desc": "Motion Artifact Contaminated ECG Database"
+    },
+    { "name": "motion-artifact",
+      "desc": "Motion Artifact Contaminated fNIRS and EEG Data"
+    },
+    { "name": "nqmitcsxpd",
+      "desc": "neuroQWERTY MIT-CSXPD Dataset"
+    },
+    { "name": "noneeg",
+      "desc": "A Non-EEG Dataset for Assessment of Neurological Status"
+    },
+    { "name": "nifecgdb",
+      "desc": "Non-Invasive Fetal ECG Database"
+    },
+    { "name": "nsr2db",
+      "desc": "Normal Sinus Rhythm RR Interval Database"
+    },
+    { "name": "ob1db",
+      "desc": "OB-1 Fetal ECG Database [sample record]"
+    },
+    { "name": "afpdb",
+      "desc": "PAF Prediction Challenge Database"
+    },
+    { "name": "picsdb",
+      "desc": "Preterm Infant Cardio-Respiratory Signals Database"
+    },
+    { "name": "prcp",
+      "desc": "Physiologic Response to Changes in Posture"
+    },
+    { "name": "szdb",
+      "desc": "Post-Ictal Heart Rate Oscillations in Partial Epilepsy"
+    },
+    { "name": "ptbdb",
+      "desc": "PTB Diagnostic ECG Database"
+    },
+    { "name": "qtdb",
+      "desc": "QT Database"
+    },
+    { "name": "qde",
+      "desc": "Quantitative Dehydration Estimation"
+    },
+    { "name": "sufhsdb",
+      "desc": "Shiraz University Fetal Heart Sounds Database"
+    },
+    { "name": "simfpcgdb",
+      "desc": "Simulated Fetal Phonocardiograms"
+    },
+    { "name": "shareedb",
+      "desc": "Smart Health for Assessing the Risk of Events via ECG Database"
+    },
+    { "name": "sgamp",
+      "desc": "Squid Giant Axon Membrane Potential"
+    },
+    { "name": "shhpsgdb",
+      "desc": "Sleep Heart Health Study PSG Database [sample record]"
+    },
+    { "name": "sleep-edfx",
+      "desc": "Sleep-EDF Database [Expanded]"
+    },
+    { "name": "mvtdb/data",
+      "desc": "Spontaneous Ventricular Tachyarrhythmia Database"
+    },
+    { "name": "incartdb",
+      "desc": "St Petersburg INCART 12-lead Arrhythmia Database"
+    },
+    { "name": "staffiii",
+      "desc": "STAFF III Database"
+    },
+    { "name": "drivedb",
+      "desc": "Stress Recognition in Automobile Drivers"
+    },
+    { "name": "sddb",
+      "desc": "Sudden Cardiac Death Holter Database"
+    },
+    { "name": "taichidb",
+      "desc": "Tai Chi, Physiological Complexity, and Healthy Aging - Gait"
+    },
+    { "name": "twadb",
+      "desc": "T-Wave Alternans Challenge Database"
+    },
+    { "name": "tpehgdb",
+      "desc": "Term-Preterm EHG Database"
+    },
+    { "name": "ucddb",
+      "desc": "UCD Sleep Apnea Database"
+    },
+    { "name": "unicaprop",
+      "desc": "UniCA ElectroTastegram Database (PROP)"
+    },
+    { "name": "videopulse",
+      "desc": "Video Pulse Signals in Stationary and Motion Conditions"
+    },
+    { "name": "mimic2db",
+      "desc": "MIMIC II Waveform DB, v2 [deprecated, use v3]"
+    },
+    { "name": "mimic2db/numerics",
+      "desc": "MIMIC II Waveform DB, v2 Numerics [deprecated, use v3]"
+    },
+    { "name": "sleep-edf",
+      "desc": "Sleep-EDF Database, v1 [deprecated, use sleep-edfx]"
+    }
+  ],
+  "version": "0.64",
+  "success": true
+}
+)
