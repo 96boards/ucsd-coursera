@@ -13,7 +13,9 @@ Create a Facebook chatbot that communicates with clients.
 - [3) Additional Steps](#3-additional-steps)
    - [3.1) Additional Substeps](#31-additional-substeps)
    - [3.2) More Substeps](#32-more-substeps)
-- [4) Execution](#5-execution)
+- [4) Execution](#4-execution)
+- [5) Resources](#5-resources)
+
 
 
 ***
@@ -81,3 +83,7 @@ code
 ```shell
 python main.py
 ```
+
+# 5) Resources
+[Facebook Chatbot](http://docs.aws.amazon.com/lex/latest/dg/fb-bot-association.html)
+[Facebook Application Quickstart](https://developers.facebook.com/docs/messenger-platform/getting-started/quick-start)
