@@ -102,10 +102,12 @@ def predict(image):
   with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
     saver.restore(sess, "./model.ckpt")
+    
     image = image.reshape(1,784)
     feed_dict = {x: image, keep_prob:1.0}
     classification = sess.run([y_conv],feed_dict)
     predicted_num = np.argmax(classification[0])
+    
     message = "We predicted a {}.".format(predicted_num)
     return message
 
