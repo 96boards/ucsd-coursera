@@ -1,10 +1,11 @@
 import base64
+import sys
 import requests
 import numpy as np
 import cv2
 
 # api-endpoint
-URL = "http://localhost:5000/upload"
+URL = str(sys.argv[1])
 
 # mouse callback function
 def draw_dot(event,x,y,flags,param):
