@@ -144,34 +144,7 @@ def main(_):
     # Save the variables to disk.
     save_path = saver.save(sess, "./model.ckpt")
     print("Model saved in file: %s" % save_path)    
-    
-    '''
-    while True:
-        # Take in user input
-        global img
-        img = np.zeros((28,28,1), np.uint8)
-        img[:,:,:] = 255
-        cv2.namedWindow('image',0)
-        cv2.setMouseCallback('image',draw_dot)
-        while(1):
-            cv2.imshow('image',img)
-            cv2.resizeWindow('image',1000,1000)
-            if cv2.waitKey(20) & 0xFF == 27:
-                break
-        img[img == 0] = 1
-        img[img == 255] = 0
-        img = img.reshape(1,784)
-        feed_dict = {x: img, keep_prob:1.0}
-        classification = sess.run([y_conv],feed_dict)
-        print(classification)
-        predicted_num = np.argmax(classification[0])
-        print("We predicted a {}.".format(predicted_num))
-        '''
 
-    # Save model
-    #save_path = saver.save(sess, "model1.ckpt")
-    #print("Model saved in file: %s" % save_path)
-    #print("--- %s seconds ---" % (time.time() - start_time))  
 
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
